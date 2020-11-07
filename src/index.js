@@ -1,6 +1,6 @@
 var http = require("http");
 
-const httpServer = http.createServer(handleServer);
+const httpServer = http.createServer(handleServer).listen(8081);
 
 function handleServer(req, res) {
   var url = req.url;
