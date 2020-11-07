@@ -7,7 +7,7 @@ function handleServer(req, res) {
   if (url === "/welcome") {
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/plain");
-    res.end("Welcome to Dominos's!");
+    res.write("Welcome to Dominos!");
   } else if (url === "/contact") {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.write({
