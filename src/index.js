@@ -5,9 +5,9 @@ const httpServer = http.createServer(handleServer).listen(8081);
 function handleServer(req, res) {
   var url = req.url;
   if (url === "/welcome") {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.write("Welcome to Dominos's!");
-    res.end();
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/plain");
+    res.end("Welcome to Dominos's!");
   } else if (url === "/contact") {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.write({
